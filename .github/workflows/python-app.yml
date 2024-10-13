@@ -31,12 +31,13 @@ jobs:
       run: |
         . venv/bin/activate
         make run &
-        for i in {1..10}; do
+        for i in {1..7}; do
           if curl --fail http://localhost:3000; then
             break
           fi
-          sleep 2
-        done
+          sleep 10
+        done  # Wait for the server to start
+
 
     - name: Test Application
       run: |
