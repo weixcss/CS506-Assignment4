@@ -31,7 +31,7 @@ jobs:
       run: |
         . venv/bin/activate
         make run &
-        sleep 15  # Wait for the server to start
+        sleep 20  # Wait for the server to start
 
     - name: Test Application
       run: |
