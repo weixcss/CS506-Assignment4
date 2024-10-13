@@ -52,9 +52,9 @@ def search():
     results = []
     for index in top_indices:
         results.append({
-            'doc_id': int(index),  # Ensure the index is a regular int type
-            'content': documents[index],  # Show full content of the document
-            'similarity': similarities[index]  # Ensure similarity is a regular float type
+            'doc_id': int(index), # document index
+            'content': documents[index],  # document content
+            'similarity': similarities[index]  # similarity score
         })
     
     return jsonify(results)
