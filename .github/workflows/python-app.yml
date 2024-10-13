@@ -23,13 +23,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m venv .venv
-        . .venv/bin/activate
+        python -m venv venv
+        . venv/bin/activate
         make install
 
     - name: Run Flask Application
       run: |
-        . .venv/bin/activate
+        . venv/bin/activate
         make run &
         sleep 10  # Wait for the server to start
 
